@@ -1,0 +1,24 @@
+.places-of-interest {
+	background: #f9f9f9;	/* Light background for the section */
+	padding: 1rem;
+	margin-top: 1rem;	/* Space from the map */
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.places-title {
+	margin-bottom: 0.5rem;
+	color: #333;
+	font-size: 1.25rem;
+}
+
+.places-list {
+	list-style: none;	/* Redmoves default bullet points */
+	padding: 0;	/* Removes default padding */
+}
+
+.places-list li {
+	padding: 0.25rem 0;	/* Adds some vertical spacing between list items */
+	font-size: 1rem;
+	color: #555;	/* Dark grey color for the text */
+}

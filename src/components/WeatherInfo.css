@@ -1,0 +1,138 @@
+.form-group { 
+	text-align: center; 
+	margin-bottom: 2em; 
+} 
+
+.input-field { 
+	padding: 0.75em; 
+	margin: 0 0.5em 1em 0; 
+	border: 1px solid #ccc; 
+	border-radius: 4px;
+	width: calc(50% - 4em); 
+} 
+
+/* Style the select dropdown */
+.input-field select {
+	cursor: pointer;	/* Indicates the element is interactive */
+}
+
+/* New container styles */
+.input-container {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem; /* Space above the map */
+	background: rgba(255, 255, 255, 0.75);	/* Semi-transparent background */
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the submit button */ 
+.submit-button { 
+	padding: 0.75em 1.5em;
+	margin-left: 10px; 
+	background-color: #007bff; /* Bootstrap primary color */ 
+	color: white; 
+	border: none; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	font-size: 1em;
+	transition: background-color 0.3s ease;	/* Smooth transition for the color */ 
+} 
+
+.submit-button:hover,
+.submit-button:focus { 
+	background-color: #0056b3; /* A darker shade for hover or focus effect */
+	color: white; /* Text color change to white */
+	outline: none;	/* Remove the focuys outline if there are other focus styles */ 
+} 
+
+/* Style the error message */ 
+.weather-error { 
+	color: #d32f2f; 
+	background-color: #ffccbc; 
+	padding: 0.5em; 
+	margin: 0.5em 0; 
+	border: 1px solid #f44336; 
+	border-radius: 4px; 
+}
+
+
+
+
+.weather-info { 
+	background: #fff; 
+	border-radius: 10px; 
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+	font-family: 'Open Sans', sans-serif; 
+	text-align: left; 
+	padding: 2em; 
+	margin: 2em auto; 
+	max-width: 350px; 
+} 
+
+.weather-info h2 { 
+	font-size: 1.75em; 
+	color: #333; 
+	margin: 0.5em; 
+} 
+
+.weather-temperature { 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-between; 
+	font-weight: 700; 
+	color: #ff5252; 
+	margin-bottom: 1em; 
+} 
+
+
+.weather-description { 
+	font-size: 1.5em; 
+	color: #555; 
+	margin-bottom: 2em; 
+} 
+
+
+
+.weather-details { 
+	background: #f7f7f7; 
+	padding: 1em; 
+	border-top: 1px solid #ddd; 
+} 
+
+.detail-item { 
+	font-size: 1em; 
+	color: #333;
+	margin-bottom: 0.5em; 
+} 
+
+/* Responsive design adjustments */ 
+@media (max-width: 768px) { 
+	.input-field, .submit-button { 
+		margin: 0.25em 0; /* Stack elements vertically on smaller screens */ 
+		width: 100%; /* Full width on small screens */ 
+	}
+
+	.weather-info { 
+		padding: 1.5em; 
+		max-width: 90%; 
+	}
+
+	.weather-temperature { 
+		font-size: 3em; 
+	} 
+
+	.weather-description { 
+		font-size: 1.2em; 
+	} 
+
+	.input-container {
+		flex-direction: column;
+		align-items: stretch; /* This will make the children fill the container*/
+	}  
+}
+
+

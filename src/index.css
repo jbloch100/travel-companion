@@ -1,0 +1,33 @@
+/* Example of global styles in index.css */ 
+
+/* Reset some basic elements */ 
+html, body, #root { 
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+} 
+
+/* Box-sizing border-box */ 
+*, *:before, *:after { 
+  box-sizing: border-box; 
+} 
+
+/* Global font styles */ 
+body { 
+  font-family: 'Arial', sans-serif; 
+  line-height: 1.6; 
+  color: #333; 
+} 
+
+/* Default spacing for all sections */ 
+section { 
+  padding: 20px; 
+} 
+
+/* Global link styles */ 
+a { 
+  color: #007bff; 
+  text-decoration: none; 
+} 
+
+/* ... other global styles ... */
