@@ -67,9 +67,9 @@ Use this app to search for weather details and explore places of interest by ent
 
 ## Roadmap
 
-◘ Add more language support.
-◘ Include hotel and restaurant recommendations.
-◘ Implement user authentication for saving favorite spots.
+- Add more language support.
+- Include hotel and restaurant recommendations.
+- Implement user authentication for saving favorite spots.
 
 ## Contributing
 
@@ -81,7 +81,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-◘ Jonathan Bloch - jonathanbloch100@gmail.com
-◘ Project Link: https://github.com/jbloch100/travel-companion
+- Jonathan Bloch - jonathanbloch100@gmail.com
+- Project Link: https://github.com/jbloch100/travel-companion
 
 
