@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Travel Companion App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React app provides users with helpful travel information, including weather updates, places of interest, and maps. Ideal for tourists and travelers looking for an all-in-one solution to plan their visits.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+You can experience the live version of the app [here](https://jbloch100.github.io/travel-companion).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Live weather forecasts for cities worldwide.
+- Interactive maps displaying key points of interest.
+- Data-driven insights into local recreational spots.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React.js
+- Create React App
+- Leaflet.js for interactive map features
+- OpenStreetMap for map data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get a local copy up and running, follow these simple steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js
+- npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
 
-### `npm run eject`
+npm install npm@latest -g
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
 
-## Learn More
+git clone https://github.com/jbloch100/travel-companion.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install NPM packages:
 
-### Code Splitting
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+cd travel-companion
+npm install
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start the development server:
 
-### Making a Progressive Web App
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+Use this app to search for weather details and explore places of interest by entering both the city name and selecting the country from a dropdown list. This feature ensures accuracy, especially for cities with the same name in different countries. It's an essential tool for trip planning and discovering new destinations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Roadmap
 
-### `npm run build` fails to minify
+◘ Add more language support.
+◘ Include hotel and restaurant recommendations.
+◘ Implement user authentication for saving favorite spots.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+
+Your contributions are what make the community an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+◘ Jonathan Bloch - jonathanbloch100@gmail.com
+◘ Project Link: https://github.com/jbloch100/travel-companion
+
+

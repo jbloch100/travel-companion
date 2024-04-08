@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'; 
 import './WeatherInfo.css'; 
 
-const WeatherInfo = () => { 
+const WeatherInfo = ({ onLocationChange }) => { 
 	const [city, setCity] = useState(''); 
 	const [country, setCountry] = useState(''); 
 	const [weatherData, setWeatherData] = useState(null); 
@@ -15,7 +15,8 @@ const WeatherInfo = () => {
 			const countryOptions = data.map(country => ({
 				name: country.name.common,
 				code: country.cca2
-			}));
+			}))
+			.sort((a, b) => a.name.localeCompare(b.name));	// Sort alphabetically by the common name
 			setCountries(countryOptions);
 		})
 		.catch(error => {
@@ -37,14 +38,18 @@ const WeatherInfo = () => {
 			}) 
 			.then(data => { 
 				setWeatherData(data);
-				setError(''); // Clear any previous errors 
+				setError(''); // Clear any previous errors
+				onLocationChange(city, country); 
 			}) 
 
 			.catch(error => { 
 				console.error("Error fetching weather data:", error); 
 				setError('Invalid location'); // Set error message for the user 
-				setWeatherData(null); // Reset weather data 
-			}); 
+				setWeatherData(null); // Reset weather data
+
+			});
+
+		 
 	}; 
 
 	return ( 
@@ -59,7 +64,7 @@ const WeatherInfo = () => {
 						   placeholder="Enter city" 
 					/> 
 
-					<select classNmae="input-field"
+					<select className="input-field"
 							value={country}
 							onChange={e =>
 							setCountry(e.target.value)}>

@@ -1,26 +1,46 @@
 import React, { useEffect } from 'react'; 
 import L from 'leaflet'; 
-import 'leaflet/dist/leaflet.css'; 
+import 'leaflet/dist/leaflet.css';
+import './MapComponent.css';
 
-const MapComponent = ({ lat, lon }) => { 
-	useEffect(() => { 
-		// Define the container ID for the map 
-		const containerId = "map"; 
+// Import marker icons
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-		// Ensure the container for the map is empty 
-		// This prevents "Map container is already initialized" error 
-		const container = document.getElementById(containerId); 
-		container.innerHTML = "";	// Ensure the container for map is empty 
+// Create a new default icon
+const defaultIcon = L.icon({
+	iconUrl: icon,
+	shadowUrl: iconShadow,
+	iconSize: [25, 41],	// size of the icon
+	iconAnchor: [12, 41], // point of the icon which will correspond to the marker's location
+	popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
+	shadowSize: [41, 41]	// size of the shadow
+});
 
-		// Initialize the map 
-		const map = L.map(containerId).setView([lat, lon], 13); 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map); 
+// Set the default icon for all Leaflet markers
+L.Marker.prototype.options.icon = defaultIcon;  
 
-		// Cleanup function to run when the component unmounts 
-		return () => map.remove(); 
-	 }, [lat, lon]);	// useEffect will re-run when lat or lon changes
+const MapComponent = ({ coordinates }) => 
+{ 
+	useEffect(() => {
+		// Initialize the map
+		const map = L.map('map').setView([coordinates.lat, coordinates.lon], 13);
 
-	return <div id="map" style={{ height: '400px', width: '100%' }}></div>; 
+		// Add OpenStreetMap tiles
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; OpenStreetMap contributors'
+		}).addTo(map);
+
+		
+		//Add a marker for the location
+		L.marker([coordinates.lat, coordinates.lon]).addTo(map);
+
+		// Clean up the map on unmount
+		return () => map.remove();
+	}, [coordinates.lat, coordinates.lon]); // Only re-run the effect if coordinates change
+
+	return <div id="map"></div>;
 }; 
 
 export default MapComponent;

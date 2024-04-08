@@ -1,21 +1,14 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  text-align: center; /* Center-aligns content */
+  max-width: 960px; /* Maximum width of the container */
+  margin: 0 auto; /* Centers the container */
+  padding: 20px; /* Adds some space inside the container */
+  font-family: 'Arial', sans-serif; /* Sets a default font */
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +17,49 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  height: 80px;
+  pointer-events: none;
 }
 
-@keyframes App-logo-spin {
+/* Adding animation to logo */
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-logo {
+  animation: logo-spin infinite 20s linear;
+}
+
+.App-footer {
+  background-color: #333; /* Dark background for the footer */
+  color: white; /* Light text color for contrast */
+  text-align: center; /* Center the text */
+  padding: 20px 0;  /* Some padding top and bottom */
+  width: 100%;  /* Full width */
+}
+
+.App-footer p {
+  margin: 10px 0; /* Space added between the lines */
+  font-size: 0.8em; /* Smaller font size */
+}
+
+.App-footer a {
+  color: #0ae;  /* Make links stand out */
+  text-decoration: none;  /* Getting rid of underlines */
+}
+
+.App-footer a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+.weather-container,
+.map-container,
+.places-container {
+  margin-top: 20px; /* Space out each section */
 }
