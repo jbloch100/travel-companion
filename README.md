@@ -17,7 +17,7 @@ You can experience the live version of the app [here](https://jbloch100.github.i
 - React.js
 - Create React App
 - Leaflet.js for interactive map features
-- OpenStreetMap for map data
+- LocationIQ for map data
 
 ## Getting Started
 
